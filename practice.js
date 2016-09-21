@@ -83,7 +83,8 @@ var getYear = function(){
 
 //Note(no tests)
   //Code Here
-var yearCar = car(getYear.call);
+// console.log(getYear.call(prius));
+// console.log(getYear.call(mustang));
 
 //New Problem
 
@@ -97,14 +98,14 @@ var getMyUsername = function() {
  return this.username;
 };
 
-var userName = getMyUsername(); //Fix this
+var userName = getMyUsername.call(myUser); //Fix this
 
 //Above you're given an object, and  a function. What will the getUsername function return?
 //Note(no tests)
   //Answer Here
-
+// at the moment the getUserName function will return  undefined because it doesnt have context yet
 //In the example above, what is the 'this keyword' bound to when getUsername runs?
 
   //Answer Here
-
+// it's bound to username, but it doesnt know where to pull its info from yet
 //Fix the getMyUsername invocation so that userName will be equal to 'iliketurtles'.
